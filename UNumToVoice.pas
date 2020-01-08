@@ -104,7 +104,7 @@ end;
 procedure TNumToVoice.validate(num: integer);
 begin
  if ((num<0)or(num>999)) then
-  raise Exception.Create('ÚÏÏ ÈÇíÓÊí Èíä 1 ÊÇ 999 ÈÇÔÏ');
+  raise Exception.Create('Ø¹Ø¯Ø¯ Ø¨Ø§ÙŠØ³ØªÙŠ Ø¨ÙŠÙ† 1 ØªØ§ 999 Ø¨Ø§Ø´Ø¯');
 end;
 
 end.

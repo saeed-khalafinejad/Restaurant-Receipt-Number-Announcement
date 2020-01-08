@@ -102,7 +102,7 @@ begin
   strtoint(edtNum.Text)
  except
   begin
-    MessageDlg('ÔãÇÑå æÇÑÏ ÔÏå ÕÍíÍ äãíÈÇÔÏ', mtError, [mbok], 0);
+    MessageDlg('Ø´Ù…Ø§Ø±Ù‡ ÙˆØ§Ø±Ø¯ Ø´Ø¯Ù‡ ØµØ­ÙŠØ­ Ù†Ù…ÙŠØ¨Ø§Ø´Ø¯', mtError, [mbok], 0);
     exit;
   end;
  end;
@@ -119,7 +119,7 @@ begin
  except
   on e:Exception do
   begin
-   MessageDlg('ÎØÇíí ÏÑ ÑæäÏ ˜ÇÑ íÔ ÂãÏ'+#13+#10+e.Message, mtError, [mbok], 0);
+   MessageDlg('Ø®Ø·Ø§ÙŠÙŠ Ø¯Ø± Ø±ÙˆÙ†Ø¯ Ú©Ø§Ø± Ù¾ÙŠØ´ Ø¢Ù…Ø¯'+#13+#10+e.Message, mtError, [mbok], 0);
   end;
  end;
 end;
@@ -151,7 +151,7 @@ procedure TfrmSpeech.btnIncClick(Sender: TObject);
 begin
  if not incNumber then
  begin
-  MessageDlg('İŞØ Çã˜Çä ÇÚáÇä ÇÚÏÇÏ 1 ÊÇ 999 æÌæÏ ÏÇÑÏ', mtInformation, [mbOK], 0);
+  MessageDlg('ÙÙ‚Ø· Ø§Ù…Ú©Ø§Ù† Ø§Ø¹Ù„Ø§Ù† Ø§Ø¹Ø¯Ø§Ø¯ 1 ØªØ§ 999 ÙˆØ¬ÙˆØ¯ Ø¯Ø§Ø±Ø¯', mtInformation, [mbOK], 0);
  end;
 end;
 
@@ -187,7 +187,7 @@ end;
 
 procedure TfrmSpeech.btnDecClick(Sender: TObject);
 begin
- if not decNumber then MessageDlg('Çã˜Çä ˜ã ˜ÑÏä æÌæÏ äÏÇÑÏ', mtInformation, [mbOK], 0);
+ if not decNumber then MessageDlg('Ø§Ù…Ú©Ø§Ù† Ú©Ù… Ú©Ø±Ø¯Ù† ÙˆØ¬ÙˆØ¯ Ù†Ø¯Ø§Ø±Ø¯', mtInformation, [mbOK], 0);
 end;
 
 procedure TfrmSpeech.btnClearClick(Sender: TObject);
@@ -212,12 +212,12 @@ begin
  try
    if lstOlds.Items.Count=0 then
    begin
-    MessageDlg('åí ÔãÇÑå Çí ÏÑ áíÓÊ ÇÚáÇä åÇí ŞÈáí æÌæÏ äÏÇÑÏ', mtWarning, [mbok], 0);
+    MessageDlg('Ù‡ÙŠÚ† Ø´Ù…Ø§Ø±Ù‡ Ø§ÙŠ Ø¯Ø± Ù„ÙŠØ³Øª Ø§Ø¹Ù„Ø§Ù† Ù‡Ø§ÙŠ Ù‚Ø¨Ù„ÙŠ ÙˆØ¬ÙˆØ¯ Ù†Ø¯Ø§Ø±Ø¯', mtWarning, [mbok], 0);
     exit;
    end;
    if lstOlds.ItemIndex=-1 then
    begin
-    MessageDlg('ÇÒ ÇÚáÇä åÇí ŞÈáí í˜ ÔãÇÑå ÑÇ ÇäÊÎÇÈ äãÇííÏ', mtWarning, [mbok], 0);
+    MessageDlg('Ø§Ø² Ø§Ø¹Ù„Ø§Ù† Ù‡Ø§ÙŠ Ù‚Ø¨Ù„ÙŠ ÙŠÚ© Ø´Ù…Ø§Ø±Ù‡ Ø±Ø§ Ø§Ù†ØªØ®Ø§Ø¨ Ù†Ù…Ø§ÙŠÙŠØ¯', mtWarning, [mbok], 0);
     exit;
    end;
    voicesStr:=n2v.convert(lstOlds.Items.Strings[lstOlds.itemIndex]);
@@ -225,7 +225,7 @@ begin
  except
   on e:Exception do
   begin
-   MessageDlg('ÎØÇíí ÏÑ ÑæäÏ ˜ÇÑ íÔ ÂãÏ'+#13+#10+e.Message, mtError, [mbok], 0);
+   MessageDlg('Ø®Ø·Ø§ÙŠÙŠ Ø¯Ø± Ø±ÙˆÙ†Ø¯ Ú©Ø§Ø± Ù¾ÙŠØ´ Ø¢Ù…Ø¯'+#13+#10+e.Message, mtError, [mbok], 0);
   end;
  end;
 end;

@@ -46,7 +46,7 @@ begin
  if n<=2 then result:=convert2Digit(D)//0..99
  else if n=3 then result:=convert3Digit(D)//100..999
  else if ((n>3)and(n<=6)) then result:=convert6Digit(D)//1000..9999
- else raise Exception.Create('ÎÇÑÌ ÇÒ ãÍÏæÏå');
+ else raise Exception.Create('Ø®Ø§Ø±Ø¬ Ø§Ø² Ù…Ø­Ø¯ÙˆØ¯Ù‡');
 end;
 
 function TNumToText.convert2Digit(D: string): string;
@@ -125,47 +125,47 @@ end;
 //Constant functions for returning the text or voice files
 function TNumToText.THOUSANDS: string;
 begin
- result:='åÒÇÑ';
+ result:='Ù‡Ø²Ø§Ø±';
 end;
 
 function TNumToText.THOUSANDS_AND: string;
 begin
- result:='åÒÇÑ æ';
+ result:='Ù‡Ø²Ø§Ø± Ùˆ';
 end;
 
 function TNumToText.CTens: TArrString2to9;
-const ARR: TArrString2to9 = ('ÈíÓÊ','Óí','åá','äÌÇå','ÔÕÊ','åİÊÇÏ',
-     'åÔÊÇÏ','äæÏ');
+const ARR: TArrString2to9 = ('Ø¨ÙŠØ³Øª','Ø³ÙŠ','Ú†Ù‡Ù„','Ù¾Ù†Ø¬Ø§Ù‡','Ø´ØµØª','Ù‡ÙØªØ§Ø¯',
+     'Ù‡Ø´ØªØ§Ø¯','Ù†ÙˆØ¯');
 begin
  result:=ARR;
 end;
 
 
 function TNumToText.CTensAnd: TArrString2to9;
-const ARR: TArrString2to9 = ('ÈíÓÊ æ','Óí æ','åá æ','äÌÇå æ','ÔÕÊ æ','åİÊÇÏ æ',
-     'åÔÊÇÏ æ','äæÏ æ');
+const ARR: TArrString2to9 = ('Ø¨ÙŠØ³Øª Ùˆ','Ø³ÙŠ Ùˆ','Ú†Ù‡Ù„ Ùˆ','Ù¾Ù†Ø¬Ø§Ù‡ Ùˆ','Ø´ØµØª Ùˆ','Ù‡ÙØªØ§Ø¯ Ùˆ',
+     'Ù‡Ø´ØªØ§Ø¯ Ùˆ','Ù†ÙˆØ¯ Ùˆ');
 begin
  result:=ARR;
 end;
 
 function TNumToText.CFigures: TArrString0to19;
-const ARR: TArrString0to19 = ('ÕİÑ','í˜','Ïæ','Óå','åÇÑ','äÌ',
-     'ÔÔ','åİÊ','åÔÊ','äå','Ïå','íÇÒÏå','ÏæÇÒÏå','ÓíÒÏå',
-     'åÇÑÏå','ÇäÒÏå','ÔÇäÒÏå','åİÏå','åíÌÏå','äæÒÏå');
+const ARR: TArrString0to19 = ('ØµÙØ±','ÙŠÚ©','Ø¯Ùˆ','Ø³Ù‡','Ú†Ù‡Ø§Ø±','Ù¾Ù†Ø¬',
+     'Ø´Ø´','Ù‡ÙØª','Ù‡Ø´Øª','Ù†Ù‡','Ø¯Ù‡','ÙŠØ§Ø²Ø¯Ù‡','Ø¯ÙˆØ§Ø²Ø¯Ù‡','Ø³ÙŠØ²Ø¯Ù‡',
+     'Ú†Ù‡Ø§Ø±Ø¯Ù‡','Ù¾Ø§Ù†Ø²Ø¯Ù‡','Ø´Ø§Ù†Ø²Ø¯Ù‡','Ù‡ÙØ¯Ù‡','Ù‡ÙŠØ¬Ø¯Ù‡','Ù†ÙˆØ²Ø¯Ù‡');
 begin
  result:=ARR;
 end;
 
 function TNumToText.CHundreds: TArrString1to9;
-const ARR: TArrString1to9 = ('í˜ÕÏ','ÏæíÓÊ','ÓíÕÏ','åÇÑÕÏ','ÇäÕÏ','ÔÔÕÏ',
-     'åİÊÕÏ','åÔÊÕÏ', 'äåÕÏ');
+const ARR: TArrString1to9 = ('ÙŠÚ©ØµØ¯','Ø¯ÙˆÙŠØ³Øª','Ø³ÙŠØµØ¯','Ú†Ù‡Ø§Ø±ØµØ¯','Ù¾Ø§Ù†ØµØ¯','Ø´Ø´ØµØ¯',
+     'Ù‡ÙØªØµØ¯','Ù‡Ø´ØªØµØ¯', 'Ù†Ù‡ØµØ¯');
 begin
  result:=ARR;
 end;
 
 function TNumToText.CHundredsAnd: TArrString1to9;
-const ARR: TArrString1to9 = ('í˜ÕÏ æ','ÏæíÓÊ æ','ÓíÕÏ æ','åÇÑÕÏ æ','ÇäÕÏ æ',
-     'ÔÔÕÏ æ','åİÊÕÏ æ','åÔÊÕÏ æ', 'äåÕÏ æ');
+const ARR: TArrString1to9 = ('ÙŠÚ©ØµØ¯ Ùˆ','Ø¯ÙˆÙŠØ³Øª Ùˆ','Ø³ÙŠØµØ¯ Ùˆ','Ú†Ù‡Ø§Ø±ØµØ¯ Ùˆ','Ù¾Ø§Ù†ØµØ¯ Ùˆ',
+     'Ø´Ø´ØµØ¯ Ùˆ','Ù‡ÙØªØµØ¯ Ùˆ','Ù‡Ø´ØªØµØ¯ Ùˆ', 'Ù†Ù‡ØµØ¯ Ùˆ');
 begin
  result:=ARR;
 end;
@@ -178,7 +178,7 @@ end;
 procedure TNumToText.validate(num: integer);
 begin
  if ((num<0)or(num>999999)) then
-  raise Exception.Create('ÚÏÏ ÈÇíÓÊí Èíä 1 ÊÇ 999999 ÈÇÔÏ');
+  raise Exception.Create('Ø¹Ø¯Ø¯ Ø¨Ø§ÙŠØ³ØªÙŠ Ø¨ÙŠÙ† 1 ØªØ§ 999999 Ø¨Ø§Ø´Ø¯');
 end;
 
 end.
